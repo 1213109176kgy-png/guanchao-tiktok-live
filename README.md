@@ -2,7 +2,7 @@
 
 **在 Windows 桌面上浏览 TikTok，识别直播间，一键开始记录观众互动。**
 
-[English](#english) · [下载 Windows 正式包](../../releases/latest) · [验证范围](docs/VALIDATION.md) · [许可证](LICENSE)
+[English](#english) · [下载 Windows 正式包](https://github.com/1213109176kgy-png/guanchao-tiktok-live/releases/latest) · [验证范围](docs/VALIDATION.md) · [许可证](LICENSE)
 
 观潮是一款本机运行的 TikTok 直播观众记录与人工跟进工具。首页内嵌 TikTok 网页，进入具体直播间后可快捷添加采集任务；评论、礼物、入场等事件中的观众资料保存到本机 SQLite，便于筛选、整理、备注和导出。
 
@@ -21,7 +21,7 @@
 
 ## 下载与使用
 
-前往 [Releases](../../releases/latest)，下载 **Guanchao-0.3.0-Windows-x64.exe**，双击运行；或下载 ZIP，完整解压后运行 Guanchao.exe。目标环境为 Windows 10 / 11 x64，目前已在开发机 Windows 11 验证。
+前往 [Releases](https://github.com/1213109176kgy-png/guanchao-tiktok-live/releases/latest)，下载 **Guanchao-0.3.0-Windows-x64.exe**，双击运行；或下载 ZIP，完整解压后运行 Guanchao.exe。目标环境为 Windows 10 / 11 x64，目前已在开发机 Windows 11 验证。
 
 1. 打开“运行设置”，按需要配置网络代理及 Euler Stream API Key。
 2. 在首页浏览 TikTok，进入具体直播间后点击“采集此直播间”；也可以点击“添加直播间”，输入主播 @账号或完整直播链接。
@@ -93,7 +93,7 @@ Guanchao is a local TikTok LIVE audience desk for reviewing interaction records 
 
 ### Download and run
 
-Download the Windows x64 portable EXE or ZIP from [Releases](../../releases/latest). No separate Node.js, database, browser installation or self-hosted server is required. Internet access to TikTok and the external Euler Stream signing service is still needed.
+Download the Windows x64 portable EXE or ZIP from [Releases](https://github.com/1213109176kgy-png/guanchao-tiktok-live/releases/latest). No separate Node.js, database, browser installation or self-hosted server is required. Internet access to TikTok and the external Euler Stream signing service is still needed.
 
 Configure your proxy if needed and your Euler Stream API key in Settings. Browse to a LIVE room and select the collection button, or add a broadcaster by username or full LIVE URL. Review records in Audience Desk and Interactions, save notes, and export CSV files.
 
