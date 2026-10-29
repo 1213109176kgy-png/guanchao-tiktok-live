@@ -36,6 +36,10 @@
 
 打包程序通过 10 项桌面检查和 9 项受控首页检查，便携 EXE 已在开发机启动。**真实 TikTok 登录、直播采集连接、字段准确性和长时间稳定性仍需真实直播间验证。** 只记录收到互动事件的观众，不提供完整在线名单；等级是最近观测值。没有 AI 意向评分、自动触达或自动私信，不承诺获客数量和转化结果。二进制未做发行者代码签名。
 
+### 开发者与交流支持
+
+**开发者：老K（Lao K）。** [微信联系二维码](https://github.com/1213109176kgy-png/guanchao-tiktok-live/blob/main/docs/assets/laok-wechat.jpg) · [微信自愿赞助收款码](https://github.com/1213109176kgy-png/guanchao-tiktok-live/blob/main/docs/assets/laok-wechat-pay.jpg)。添加微信请备注“观潮”。欢迎 Star、反馈和分享；赞助自愿，不是使用前提，不代表购买定制开发或服务承诺。
+
 ## English
 
 **Turn TikTok LIVE interactions into leads you can review, prioritize and follow up on.**
@@ -57,3 +61,7 @@ Embedded TikTok browsing and contextual task creation; up to three concurrent ta
 Download the complete Windows EXE or ZIP using the links above. Gitee's 100 MB per-file limit prevents hosting these complete binaries there.
 
 Packaged desktop and controlled-page checks pass, and the portable EXE launches on the development machine. Real login, LIVE collection, field accuracy and long-running stability remain unverified. Records cover received interaction events, not the entire viewer list. There is no automated lead scoring, outreach or direct messaging. Binaries are unsigned. Original project code is AGPL-3.0-only; third-party licenses are retained.
+
+### Developer and support
+
+Created and maintained by **老K (Lao K)**. [WeChat contact QR](https://github.com/1213109176kgy-png/guanchao-tiktok-live/blob/main/docs/assets/laok-wechat.jpg) · [Optional WeChat Pay support](https://github.com/1213109176kgy-png/guanchao-tiktok-live/blob/main/docs/assets/laok-wechat-pay.jpg). Donations are voluntary and do not purchase custom development or a service commitment.

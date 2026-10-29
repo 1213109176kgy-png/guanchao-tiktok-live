@@ -2,7 +2,7 @@
   "name": "live-audience-desk",
   "version": "0.3.0",
   "description": "观潮 TikTok 直播观众 Windows 工作台",
-  "author": "Guanchao",
+  "author": "老K (Lao K)",
   "main": "desktop-dist/main.mjs",
   "private": true,
   "allowScripts": {

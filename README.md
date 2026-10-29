@@ -4,6 +4,8 @@
 
 面向跨境卖家、直播运营、主播与公会：发现潜在客户，筛选高等级送礼用户，建立自己的直播间线索库。
 
+**开发者 / Developer：老K（Lao K）** · [微信交流与赞助支持](#开发者与联系)
+
 [下载 Windows 正式包](https://github.com/1213109176kgy-png/guanchao-tiktok-live/releases/latest) · [GitHub](https://github.com/1213109176kgy-png/guanchao-tiktok-live) · [Gitee](https://gitee.com/kugou8/guanchao-tiktok-live) · [English](#english) · [验证范围](docs/VALIDATION.md)
 
 ## 这个项目能帮你做什么？
@@ -95,6 +97,17 @@ CSV 导出覆盖全部符合当前条件的观众，不限于列表当前页，�
 6. **留下进度**：填写备注、更新跟进状态，必要时打开主页人工联系，或导出 CSV。
 
 这里的“线索”指需要你进一步判断的用户信息。当前版本不包含 AI 意向评分、自动关键词分类、自动触达或自动私信。
+
+## 开发者与联系
+
+**开发者：老K。** 欢迎交流 TikTok 直播运营、使用反馈与功能建议。扫码添加微信时，请备注“观潮”。问题复现和功能需求也可以通过仓库 Issues 提交，方便公开跟踪。
+
+如果这个项目对你有帮助，欢迎点亮 Star、分享项目，或通过微信收款码自愿赞助，支持老K继续维护与迭代。**赞助金额自愿，不是使用开源项目的前提，也不构成定制开发或服务交付承诺。**
+
+| 微信联系 · 老K | 微信赞助 · 自愿支持 |
+| :---: | :---: |
+| <img src="docs/assets/laok-wechat.jpg" alt="开发者老K的微信联系二维码" width="260" /> | <img src="docs/assets/laok-wechat-pay.jpg" alt="老K的微信自愿赞助收款码" width="260" /> |
+| 项目交流、反馈与建议 | 感谢你支持项目维护 |
 
 ## 下载与使用
 
@@ -193,6 +206,16 @@ The contextual collection button reduces the steps between finding a LIVE room a
 | Portable Windows EXE and ZIP | Run without a separate Node.js or database installation |
 
 There is no automated intent scoring, keyword classification, outreach or direct messaging. Collection still requires internet access to TikTok and an external signing service. Incoming events do not provide a complete viewer list.
+
+### Developer, contact and support
+
+**Created and maintained by 老K (Lao K).** Scan the WeChat contact QR code below to discuss the project or share feedback; mention “Guanchao” when adding the contact. Reproducible bugs and feature requests can also be submitted through repository Issues.
+
+If Guanchao is useful to you, consider starring or sharing the project, or making a voluntary contribution using the WeChat Pay QR code. Donations are optional, are not required to use the open-source project, and do not purchase custom development or a service commitment.
+
+| WeChat contact · Lao K | Optional support · WeChat Pay |
+| :---: | :---: |
+| <img src="docs/assets/laok-wechat.jpg" alt="Lao K WeChat contact QR code" width="260" /> | <img src="docs/assets/laok-wechat-pay.jpg" alt="Optional WeChat Pay donation QR code for Lao K" width="260" /> |
 
 ### Download and run
 
