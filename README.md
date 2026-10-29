@@ -1,23 +1,100 @@
-# 观潮 Guanchao · TikTok LIVE Audience Desk
+# 观潮 Guanchao · TikTok 直播间获客与高价值用户发现工作台
 
-**在 Windows 桌面上浏览 TikTok，识别直播间，一键开始记录观众互动。**
+**把直播间里一闪而过的互动，整理成可以筛选、判断和持续跟进的潜在客户线索。**
 
-[English](#english) · [下载 Windows 正式包](https://github.com/1213109176kgy-png/guanchao-tiktok-live/releases/latest) · [验证范围](docs/VALIDATION.md) · [许可证](LICENSE)
+面向跨境卖家、直播运营、主播与公会：发现潜在客户，筛选高等级送礼用户，建立自己的直播间线索库。
 
-观潮是一款本机运行的 TikTok 直播观众记录与人工跟进工具。首页内嵌 TikTok 网页，进入具体直播间后可快捷添加采集任务；评论、礼物、入场等事件中的观众资料保存到本机 SQLite，便于筛选、整理、备注和导出。
+[下载 Windows 正式包](https://github.com/1213109176kgy-png/guanchao-tiktok-live/releases/latest) · [GitHub](https://github.com/1213109176kgy-png/guanchao-tiktok-live) · [Gitee](https://gitee.com/kugou8/guanchao-tiktok-live) · [English](#english) · [验证范围](docs/VALIDATION.md)
 
-桌面端无需自行部署服务器，也无需额外安装 Node.js、数据库或浏览器。使用时仍需要连接 TikTok 和第三方 Euler Stream 签名服务。
+## 这个项目能帮你做什么？
 
-## 功能
+TikTok 直播间里，观众正在问价格、询问配送、讨论产品，也有人持续评论、参与粉丝团或赠送礼物。这些互动，是发现潜在客户和重点运营对象的起点。
 
-- **内嵌 TikTok 首页**：浏览视频和直播，支持网站自身的登录流程，会话独立保存在本机。
-- **直播间快捷采集**：识别到当前直播页面后显示“采集此直播间”，支持已有任务复用、恢复和重试。
-- **直播间管理**：最多同时运行 3 个任务，查看连接状态、停止任务及查看已收到的互动。
-- **观众工作台**：记录事件中可用的昵称、账号、头像、用户 ID、送礼等级和粉丝团等级。
-- **筛选与人工跟进**：按账号、昵称、等级、送礼记录和跟进状态筛选，查看详情并保存备注。
-- **CSV 导出**：导出全部符合条件的记录，保留长用户 ID 精度并防止文本公式注入。
-- **本地保存**：任务、观众和备注保存在本机；Windows 加密保存签名密钥。
-- **仅真实数据入口**：发行版没有演示模式、示例观众生成入口或演示切换按钮。
+观潮围绕 **“发现直播间 → 记录互动观众 → 筛选有价值线索 → 查看互动背景 → 人工跟进”** 这条流程设计。你可以边浏览 TikTok 边添加直播间，把事件中可用的账号、昵称、头像、等级和互动记录留在本机，再决定哪些人值得进一步了解。
+
+### 1. 直播间获客：把互动中的机会留下来
+
+面向跨境卖家、品牌和垂直行业运营者，在获准采集的目标直播间里整理参与互动的用户。结合评论内容与账号资料，人工判断产品兴趣和需求，把值得了解的人标记为待联系或有意向，后续再开展适当沟通。
+
+例如：你在美妆直播间看到有人询问配送、款式或产品细节，可以在互动记录中回看内容，找到对应账号，在备注里写下需求，形成有背景信息的线索，而不是只留下一串用户名。
+
+### 2. 高价值用户发现：优先关注高等级、有送礼行为的观众
+
+对于主播、公会和娱乐直播运营，可以通过 **送礼等级范围、“有送礼记录”、礼物数量排序** 缩小关注范围，寻找值得进一步了解的高等级送礼用户，也就是运营中常说的“找大哥”线索。
+
+例如：先筛选送礼等级 ≥ 20 的观众，再查看其在采集期间的送礼与评论记录、来源房间和粉丝团等级，整理一份需要人工评估的重点用户名单。
+
+**等级和送礼行为用于安排关注优先级，不能直接证明收入、真实购买力或合作意愿。** 产品不自动判定谁一定会付费，也不承诺获客或转化结果。
+
+### 3. 粉丝与社群运营：带着互动背景做跟进
+
+把观众的来源直播间、房间内粉丝团等级、评论和礼物记录放到同一份资料中，帮助运营人员了解“这个人从哪里来、出现过什么互动、上次跟进到哪一步”。按需要记录待联系、已联系、有意向等状态，避免下一次又从头查找。
+
+## 谁适合使用？
+
+| 使用者 | 想解决的问题 | 在观潮里的工作方式 |
+| --- | --- | --- |
+| 跨境电商卖家、品牌运营 | 从直播互动中寻找产品相关的潜在客户 | 选择相关房间，查看互动背景，人工判断需求并记录跟进 |
+| 娱乐主播、直播公会 | 寻找高等级送礼用户和重点维护对象 | 按送礼等级、送礼记录与礼物数量筛选，再查看详情 |
+| 自有直播间运营者 | 直播结束后还能回看观众互动、继续维护关系 | 保存账号与事件，整理备注和跟进状态 |
+| 社群、用户运营人员 | 把分散的观众信息整理成可执行的跟进清单 | 按来源和状态整理，导出符合条件的 CSV |
+| 开发者、工具集成者 | 基于现成桌面工作台继续开发 | 复用开源源码、本地数据库和已有采集适配层 |
+
+以上是产品支持的工作方式与使用示例，并非已经验证的客户案例或业务效果。
+
+## 为什么用观潮整理直播间线索？
+
+### 边浏览，边把直播间加入采集
+
+首页就是内嵌的 TikTok 网页。浏览视频、进入直播间，识别到具体直播页面后出现“采集此直播间”。任务建立后，切换到其他模块或继续浏览，都不会主动停止已经运行的采集任务。
+
+### 按价值线索筛选，决定先看谁
+
+支持送礼等级区间、等级已知或未知、最低粉丝团等级、有无送礼记录、跟进状态等条件；可按最近出现、送礼等级或礼物数量排序。先缩小范围，再逐一查看，适合人工做优先级判断。
+
+### 账号、互动和来源放在一起
+
+观众详情关联来源直播间和收到的互动记录。送礼等级与房间内粉丝团等级分别展示，未知字段保持未知，方便你结合上下文理解用户，而不是只凭昵称和一个等级数字判断。
+
+### 从发现线索，到留下跟进进度
+
+支持“未跟进 → 待联系 → 已联系 → 有意向 → 已结束”等人工状态，以及最多 4,000 字备注。可记录已知需求、沟通结果和下次事项；有有效账号时可以打开 TikTok 主页，再按平台允许的方式人工联系。
+
+### Windows 双击运行，线索保存在本机
+
+免安装 EXE 或完整 ZIP 即可运行，无需自行部署服务器，也无需额外安装 Node.js、数据库或浏览器。任务、观众、事件与备注保存在本机 SQLite，签名密钥通过 Windows 加密保存。访问 TikTok 与签名服务仍需联网。
+
+### 筛选后的名单可以继续使用
+
+CSV 导出覆盖全部符合当前条件的观众，不限于列表当前页，便于放入表格做后续整理。长用户 ID 按文本处理，中文使用 UTF-8 BOM，并对文本公式注入做转义。
+
+## 功能清单
+
+| 模块 | 已实现功能 | 对使用者的作用 |
+| --- | --- | --- |
+| TikTok 首页 | 内嵌浏览、网站自身登录流程、会话本地保留、地址栏、前进/后退/刷新 | 在熟悉的浏览流程中发现目标直播间 |
+| 快捷添加 | 识别当前直播页面，创建或复用任务，恢复与重试入口 | 把发现的房间快速加入采集 |
+| 直播间管理 | 最多 3 个任务同时采集，连接状态、停止与手动启动 | 集中管理多个关注房间 |
+| 观众资料 | 记录事件中可用的账号、昵称、头像和用户 ID，按标识去重 | 将收到的互动关联到对应用户 |
+| 两类等级 | 最近观测的送礼等级、按来源房间记录的粉丝团等级 | 为送礼用户筛选和粉丝运营提供参考 |
+| 互动记录 | 评论、礼物、入场、点赞、关注、分享等支持事件的归一化记录 | 回看用户在采集期间的参与情况 |
+| 搜索与筛选 | 昵称/账号/ID 搜索，等级区间、未知等级、粉丝团等级、送礼及跟进条件 | 找到符合人工评估条件的线索 |
+| 排序与详情 | 最近出现、送礼等级优先、礼物数量优先，来源房间与事件详情 | 结合证据安排查看顺序 |
+| 人工跟进 | 状态管理、4,000 字备注、有效账号主页入口 | 保存沟通背景与下一步事项 |
+| 导出 | 全部筛选结果 CSV、长 ID 精度保留、文本公式转义 | 将线索用于表格整理与人工工作流 |
+| 本地数据 | SQLite 保存，关闭后保留记录，可打开数据目录 | 在本机管理与备份历史记录 |
+| 运行配置 | 可选代理、Euler Stream API Key、运行诊断 | 按实际网络和服务权限配置采集 |
+
+## 一条实际可操作的线索整理流程
+
+1. **选房间**：在内嵌 TikTok 中浏览与你的产品、内容或运营方向相关、且获准采集的直播间。
+2. **添加采集**：识别到当前直播页面后点击“采集此直播间”，检查连接是否成功。
+3. **积累记录**：接收采集期间的互动事件，保存其中可用的用户资料与等级。
+4. **筛选线索**：做产品获客时回看评论需求；做送礼用户运营时结合等级、送礼记录和礼物数量缩小范围。
+5. **人工判断**：查看账号、来源房间和互动背景，决定是否值得进一步了解。
+6. **留下进度**：填写备注、更新跟进状态，必要时打开主页人工联系，或导出 CSV。
+
+这里的“线索”指需要你进一步判断的用户信息。当前版本不包含 AI 意向评分、自动关键词分类、自动触达或自动私信。
 
 ## 下载与使用
 
@@ -78,18 +155,44 @@ Electron / React / TypeScript / Vite / Node.js SQLite。桌面端通过 IPC 调�
 
 ## English
 
-**Browse TikTok on your Windows desktop and start recording LIVE audience interactions from the room you discover.**
+**Turn TikTok LIVE interactions into audience leads you can review, prioritize and follow up on.**
 
-Guanchao is a local TikTok LIVE audience desk for reviewing interaction records and managing manual follow-up. It embeds the TikTok website, detects the current LIVE page, and stores available audience information from incoming events in a local SQLite database.
+Guanchao is an open-source Windows workspace for **LIVE-based lead discovery, high-level gifter research and manual relationship management**. It brings embedded TikTok browsing, interaction records, audience filters and follow-up notes into one local application.
 
-### Features
+### What can you use it for?
 
-- Embedded TikTok browsing with a persistent, isolated local session.
-- A contextual collection button for recognized LIVE pages, with resume and retry actions.
-- Up to three concurrent collection tasks and visible connection states.
-- Available usernames, nicknames, avatars, user IDs, observed gifter levels and room-specific fan-club levels.
-- Search, filters, interaction details, follow-up statuses, notes and CSV export.
-- Local storage and Windows-encrypted API-key storage. No demo mode in the released application.
+**Find potential customers in relevant LIVE conversations.** Sellers and brand operators can review available comments and audience profiles from rooms they are authorized to collect from, identify product-related questions manually, and retain useful context for later follow-up.
+
+**Discover high-level gifters and priority audience leads.** Streamers and agencies can combine observed gifter levels, recorded gifts, gift-quantity sorting and room-specific fan-club levels to build a shortlist for human review. These signals help prioritize attention; they do not establish income, purchasing power or willingness to engage.
+
+**Keep audience relationships organized.** Review a user's source rooms and interaction history, save notes, and mark leads as new, pending, contacted, interested or closed. Open valid TikTok profiles for appropriate manual follow-up, or export the filtered list for spreadsheet work.
+
+These are supported workflows and illustrative use cases, not verified customer outcomes or conversion claims.
+
+### A workflow from discovery to follow-up
+
+**Browse a relevant room → start collection → review incoming events → filter audience signals → assess context manually → save follow-up progress or export.**
+
+The contextual collection button reduces the steps between finding a LIVE room and adding a task. Audience records keep available usernames, IDs, avatars, levels and interactions together. Filters help you decide which records to inspect first; notes preserve what you learned.
+
+### Features and practical benefits
+
+| Capability | What it helps you do |
+| --- | --- |
+| Embedded TikTok website with an isolated, persistent local session | Browse videos and discover rooms from the desktop workspace |
+| Contextual collection, task reuse, resume and retry | Add recognized LIVE pages to your workflow |
+| Up to three concurrent collection tasks | Manage several rooms with visible connection states |
+| Available usernames, nicknames, avatars and string-preserved user IDs | Associate received events with audience identities |
+| Last-observed gifter levels and room-specific fan-club levels | Review engagement and gifting signals separately |
+| Search, level ranges, known/unknown fields, gift and follow-up filters | Build a shortlist using your own criteria |
+| Recent activity, level and gift-quantity sorting | Prioritize records for human review |
+| Interaction details and source-room history | Read the context behind an audience record |
+| Manual statuses, notes of up to 4,000 characters and profile links | Keep relationship-management progress in one place |
+| Export of all matching records, beyond the current page | Continue working in spreadsheets |
+| Local SQLite storage and Windows-encrypted API keys | Keep records locally without deploying your own server |
+| Portable Windows EXE and ZIP | Run without a separate Node.js or database installation |
+
+There is no automated intent scoring, keyword classification, outreach or direct messaging. Collection still requires internet access to TikTok and an external signing service. Incoming events do not provide a complete viewer list.
 
 ### Download and run
 
