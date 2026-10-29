@@ -1,0 +1,52 @@
+{
+  "name": "live-audience-desk",
+  "version": "0.3.0",
+  "description": "观潮 TikTok 直播观众 Windows 工作台",
+  "author": "Guanchao",
+  "main": "desktop-dist/main.mjs",
+  "private": true,
+  "allowScripts": {
+    "electron": true,
+    "esbuild": true
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "tsx server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "start": "tsx server/index.ts --production",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "node scripts/browser-qa.mjs",
+    "build:desktop": "npm run build && node scripts/build-desktop.mjs",
+    "desktop": "npm run build:desktop && electron .",
+    "package:win": "npm run build:desktop && electron-builder --win --x64",
+    "test:desktop": "node scripts/desktop-qa.mjs",
+    "test:home": "node scripts/home-qa.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "hpagent": "^1.2.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tiktok-live-connector": "2.5.0"
+  },
+  "devDependencies": {
+    "@playwright/cli": "^0.1.22",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.5.0",
+    "electron": "^45.1.0",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "vite": "^6.3.0"
+  },
+  "license": "AGPL-3.0-only"
+}

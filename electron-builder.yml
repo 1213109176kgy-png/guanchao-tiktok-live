@@ -1,0 +1,26 @@
+appId: com.guanchao.audience
+productName: Guanchao
+asar: true
+electronDist: node_modules/electron/dist
+directories:
+  output: release
+files:
+  - desktop-dist/**
+  - dist/**
+  - third_party/**
+  - package.json
+  - '!**/.env'
+  - '!data/**'
+  - '!output/**'
+  - '!tests/**'
+win:
+  target:
+    - target: portable
+      arch: [x64]
+    - target: zip
+      arch: [x64]
+  artifactName: Guanchao-${version}-Windows-x64.${ext}
+  signAndEditExecutable: false
+portable:
+  requestExecutionLevel: user
+npmRebuild: false
